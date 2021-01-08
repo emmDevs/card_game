@@ -12,9 +12,9 @@ public class DeckTest {
         deck = new Deck();
     }
 
-//    @Test
-//    public void deckStartsEmpty(){
-//        assertEquals(0, deck.countCardsInDeck());
-//    }
+    @Test
+    public void deckStartsEmpty(){
+        assertEquals(0, deck.countCardsInDeck());
+    }
 
 }

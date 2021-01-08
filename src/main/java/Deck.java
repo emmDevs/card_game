@@ -3,14 +3,14 @@ import java.util.ArrayList;
 
 public class Deck {
 
-    private ArrayList<Card> deckOfCards;
+    private ArrayList<Card> Cards;
 
     public Deck(){
-        this.deckOfCards = deckOfCards;
+        this.Cards = new ArrayList<Card>();
     }
 
     public int countCardsInDeck() {
-        return this.deckOfCards.size();
+        return this.Cards.size();
     }
 }
 
