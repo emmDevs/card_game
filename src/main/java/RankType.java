@@ -1,7 +1,6 @@
-public enum Rank {
+public enum RankType {
 
     ACE(1),
-    ONE(1),
     TWO(2),
     THREE(3),
     FOUR(4),
@@ -17,7 +16,7 @@ public enum Rank {
 
     private final int value;
 
-    Rank(int value){
+    RankType(int value){
         this.value = value;
     }
 

@@ -1,22 +1,32 @@
 public class Card {
 
-    private Suit suit;
-    private Rank rank;
+    private SuitType suitType;
+    private RankType rankType;
 
-    public Card(Suit suit, Rank rank){
-        this.suit = suit;
-        this.rank = rank;
+    public Card(SuitType suitType, RankType rankType){
+        this.suitType = suitType;
+        this.rankType = rankType;
     }
 
-    public Suit getSuit(){
-        return this.suit;
+    public SuitType getSuit(){
+        return this.suitType;
     }
 
-    public Rank getRank() {
-        return this.rank;
+    public RankType getRank() {
+        return this.rankType;
     }
 
     public int getValueFromEnum() {
-        return this.rank.getValue();
+        return this.rankType.getValue();
     }
+
+//    public Card populateDeck() {
+//        for (rank : rankType){
+//            for(suit : suitType){
+//                Card createdCard = new Card(suitType, rankType);
+//            }
+//            this.card.put(createdCard);
+//        }
+//    }
+
 }

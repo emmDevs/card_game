@@ -1,4 +1,4 @@
-public enum Suit {
+public enum SuitType {
 
     HEARTS,
     DIAMONDS,
