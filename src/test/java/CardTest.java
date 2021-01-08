@@ -21,4 +21,9 @@ public class CardTest {
     public void canGetRank(){
         assertEquals(Rank.QUEEN, card.getRank());
     }
+
+    @Test
+    public void queenHasValueOf10(){
+        assertEquals(10, card.getValueFromEnum());
+    }
 }
