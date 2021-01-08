@@ -20,13 +20,5 @@ public class Card {
         return this.rankType.getValue();
     }
 
-//    public Card populateDeck() {
-//        for (rank : rankType){
-//            for(suit : suitType){
-//                Card createdCard = new Card(suitType, rankType);
-//            }
-//            this.card.put(createdCard);
-//        }
-//    }
 
 }

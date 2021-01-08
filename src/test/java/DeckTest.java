@@ -32,7 +32,7 @@ public class DeckTest {
     }
 
     @Test
-    public void dealCard(){
+    public void canDealCard(){
         deck.populateDeck();
         deck.dealCard(0);
         assertEquals(51, deck.countCardsInDeck());
