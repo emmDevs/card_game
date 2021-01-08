@@ -23,4 +23,12 @@ public class DeckTest {
         assertEquals(52, deck.countCardsInDeck());
     }
 
+    @Test
+    public void canShuffleDeck(){
+        deck.populateDeck();
+        System.out.println(deck.getCards());
+        deck.shuffleCards();
+        System.out.println(deck.getCards());
+    }
+
 }
