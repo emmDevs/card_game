@@ -13,4 +13,8 @@ public class Player {
     public String getName() {
         return this.name;
     }
+
+    public int countCardsInHand() {
+        return this.hand.size();
+    }
 }

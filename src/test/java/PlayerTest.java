@@ -22,4 +22,9 @@ public class PlayerTest {
     public void playerHasName(){
         assertEquals("Emma", player1.getName());
     }
+
+    @Test
+    public void handStartsEmpty(){
+        assertEquals(0, player2.countCardsInHand());
+    }
 }
