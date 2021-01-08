@@ -34,6 +34,11 @@ public class Deck {
     public ArrayList<Card> getCards() {
         return this.cards;
     }
+
+    public Card dealCard(int index) {
+        Card dealtCard = this.cards.remove(index);
+        return dealtCard;
+    }
 }
 
 

@@ -31,4 +31,11 @@ public class DeckTest {
         System.out.println(deck.getCards());
     }
 
+    @Test
+    public void dealCard(){
+        deck.populateDeck();
+        deck.dealCard(0);
+        assertEquals(51, deck.countCardsInDeck());
+    }
+
 }
