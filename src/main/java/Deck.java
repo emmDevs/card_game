@@ -35,7 +35,7 @@ public class Deck {
         return this.cards;
     }
 
-    public void dealCard(int index, Player player) {
+    public void dealCardToOnePlayer(int index, Player player) {
         if (countCardsInDeck() > 0) {
             Card dealtCard = this.cards.remove(index);
             player.addCardToHand(dealtCard);

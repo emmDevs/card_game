@@ -36,7 +36,7 @@ public class DeckTest {
     @Test
     public void canDealCard(){
         deck.populateDeck();
-        deck.dealCard(0, player1);
+        deck.dealCardToOnePlayer(0, player1);
         assertEquals(51, deck.countCardsInDeck());
     }
 

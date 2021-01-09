@@ -3,16 +3,19 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class PlayerTest {
+public class GameTest {
 
+    Game game;
     Deck deck;
     Player player1;
     Player player2;
     Player player3;
     Player player4;
 
+
     @Before
     public void setUp(){
+        game = new Game();
         deck = new Deck();
         deck.populateDeck();
         player1 = new Player("Emma");
@@ -22,19 +25,8 @@ public class PlayerTest {
     }
 
     @Test
-    public void playerHasName(){
-        assertEquals("Emma", player1.getName());
-    }
-
-    @Test
-    public void handStartsEmpty(){
-        assertEquals(0, player2.countCardsInHand());
-    }
-
-    @Test
-    public void canBeDealtACard(){
-        deck.dealCardToOnePlayer(0, player2);
-        assertEquals(1, player2.countCardsInHand() );
+    public void gameStartsWithNoPlayers(){
+        assertEquals(0, game.getNumberOfPlayers());
     }
 
 }
