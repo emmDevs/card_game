@@ -29,4 +29,10 @@ public class GameTest {
         assertEquals(0, game.getNumberOfPlayers());
     }
 
+    @Test
+    public void canAddPlayersToGame(){
+        game.addPlayer(player1);
+        assertEquals(1, game.getNumberOfPlayers());
+    }
+
 }
