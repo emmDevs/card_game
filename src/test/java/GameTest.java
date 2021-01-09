@@ -5,8 +5,8 @@ import static org.junit.Assert.assertEquals;
 
 public class GameTest {
 
-    Game game;
     Deck deck;
+    Game game;
     Player player1;
     Player player2;
     Player player3;
@@ -15,9 +15,9 @@ public class GameTest {
 
     @Before
     public void setUp(){
-        game = new Game();
         deck = new Deck();
         deck.populateDeck();
+        game = new Game(deck);
         player1 = new Player("Emma");
         player2 = new Player("Jono");
         player3 = new Player("Olly");
@@ -33,6 +33,20 @@ public class GameTest {
     public void canAddPlayersToGame(){
         game.addPlayer(player1);
         assertEquals(1, game.getNumberOfPlayers());
+    }
+
+    @Test
+    public void canDealACardToEachPlayerInGame(){
+//        deck.populateDeck();
+        game.addPlayer(player1);
+        game.addPlayer(player2);
+        game.addPlayer(player3);
+        game.addPlayer(player4);
+        game.dealCardToMultiplePlayers(0);
+        assertEquals(1, player1.countCardsInHand());
+        assertEquals(1, player2.countCardsInHand());
+        assertEquals(1, player3.countCardsInHand());
+        assertEquals(1, player4.countCardsInHand());
     }
 
 }

@@ -6,10 +6,13 @@ public class Game {
 
     private ArrayList<Player> players;
     private ArrayList<Player> winners;
+    private Deck deck;
 
-    public Game(){
+    public Game(Deck deck){
         this.players = new ArrayList<Player>();
         this.winners = new ArrayList<Player>();
+        this.deck = deck;
+
     }
 
     public int getNumberOfPlayers(){
@@ -19,4 +22,16 @@ public class Game {
     public void addPlayer(Player player) {
         this.players.add(player);
     }
+
+    public void dealCardToMultiplePlayers(int index){
+        deck.populateDeck();
+        Card removedCard = deck.removeCardFromDeck(index);
+        for (Player player : this.players) {
+            if(deck.countCardsInDeck() > getNumberOfPlayers()){
+                player.addCardToHand(removedCard);
+            }
+        }
+    }
+
+
 }
