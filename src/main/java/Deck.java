@@ -35,9 +35,11 @@ public class Deck {
         return this.cards;
     }
 
-    public Card dealCard(int index) {
-        Card dealtCard = this.cards.remove(index);
-        return dealtCard;
+    public void dealCard(int index, Player player) {
+        if (countCardsInDeck() > 0) {
+            Card dealtCard = this.cards.remove(index);
+            player.addCardToHand(dealtCard);
+        }
     }
 }
 

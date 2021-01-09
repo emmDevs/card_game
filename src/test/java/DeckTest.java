@@ -6,10 +6,12 @@ import static org.junit.Assert.assertEquals;
 public class DeckTest {
 
     Deck deck;
+    Player player1;
 
     @Before
     public void setUp(){
         deck = new Deck();
+        player1 = new Player("Emma");
     }
 
     @Test
@@ -34,8 +36,9 @@ public class DeckTest {
     @Test
     public void canDealCard(){
         deck.populateDeck();
-        deck.dealCard(0);
+        deck.dealCard(0, player1);
         assertEquals(51, deck.countCardsInDeck());
     }
+
 
 }

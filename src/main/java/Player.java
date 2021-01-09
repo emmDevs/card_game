@@ -17,4 +17,8 @@ public class Player {
     public int countCardsInHand() {
         return this.hand.size();
     }
+
+    public void addCardToHand(Card card) {
+        this.hand.add(card);
+    }
 }
