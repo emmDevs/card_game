@@ -34,4 +34,13 @@ public class Game {
     }
 
 
+//    public String playGame(int index) {
+//        deck.populateDeck();
+//        deck.shuffleCards();
+//        dealCardToMultiplePlayers(index);
+//        int winningScore = 0;
+//        for(Player player : this.players){
+//            if(player.)
+//        }
+//    }
 }

@@ -21,4 +21,12 @@ public class Player {
     public void addCardToHand(Card card) {
         this.hand.add(card);
     }
+
+    public int getValueOfHand(){
+        int handValue = 0;
+        for(Card card : this.hand){
+            handValue += card.getValueFromEnum();
+        }
+        return handValue;
+    }
 }
