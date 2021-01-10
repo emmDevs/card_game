@@ -47,37 +47,18 @@ public class Game {
     }
 
 
-//    public int playGame(int index) {
-//        deck.populateDeck();
-//        deck.shuffleCards();
-//        dealCardToMultiplePlayers(index);
-//        int winningScore = 0;
-//        for (Player player : this.players) {
-//            if (player.getValueOfHand() > winningScore) {
-//                winningScore = player.getValueOfHand();
-//                return winningScore;
-//            }
-//
-//        }
 
-//    public void playGame(int index){
-//        for(Player player : this.players){
-//            if(player.getValueOfHand() > winningScore){
-//                winningScore = player.getValueOfHand();
-//                }
-//            }
-//        }
+    public String declareWinner(int index) {
+            Integer winningValue = playGame(index);
+            for (Player player : this.players) {
+                if (player.getValueOfHand() == winningValue) {
+                    this.winners.add(player);
+                }
+                if (this.winners.size() > 1) {
+                    return "It is a tie";
+                } else {
+                    return "Congratulations you won!";
+                }
+            }
 
-//    public String declareWinner() {
-//            for (Player player : this.players) {
-//                if (player.getValueOfHand() == playGame(index)) {
-//                    this.winners.add(player);
-//                }
-//                if (this.winners.size() > 1) {
-//                    return "It is a tie";
-//                } else {
-//                    return "Congratulations you won!";
-//                }
-//            }
-//
-//        }
+        }

@@ -65,4 +65,18 @@ public class GameTest {
 
     }
 
+    @Test
+    public void canDeclareWinner__OneWinner(){
+        player1.addCardToHand(new Card(SuitType.HEARTS, RankType.ACE));
+        player2.addCardToHand(new Card(SuitType.CLUBS, RankType.FIVE));
+        player3.addCardToHand(new Card(SuitType.DIAMONDS, RankType.KING));
+        player4.addCardToHand(new Card(SuitType.SPADES, RankType.EIGHT));
+        game.addPlayer(player1);
+        game.addPlayer(player2);
+        game.addPlayer(player3);
+        game.addPlayer(player4);
+        game.playGame(0);
+        assertEquals("Congratulations you won!", game.declareWinner(0));
+    }
+
 }
